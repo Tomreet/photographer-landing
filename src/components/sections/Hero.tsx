@@ -47,7 +47,7 @@ const Hero = () => {
             className="text-7xl md:text-9xl font-light font-serif tracking-wider uppercase"
             style={{ opacity: textOpacity, y: textY }}
           >
-            Дарьяна <br className="md:hidden" /> Пушкарва
+            Дарьяна <br className="md:hidden" /> Пушкарёва
           </motion.h1>
           <motion.p
             variants={childVariants}
