@@ -1,4 +1,3 @@
-// src/components/sections/Hero.tsx
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -18,12 +17,16 @@ const Hero = () => {
       opacity: 1,
       transition: { staggerChildren: 0.3, delayChildren: 0.2 },
     },
-  };
+  } as const;
 
   const childVariants = {
     hidden: { opacity: 0, y: 60 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
-  };
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: 'easeOut' as const },
+    },
+  } as const;
 
   return (
     <section ref={ref} className="relative h-screen overflow-hidden">
@@ -34,8 +37,7 @@ const Hero = () => {
           scale: bgScale,
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-dark" />
-
+      <div className="absolute inset-0 bg-black/40 z-[2]" />
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6">
         <motion.div
           variants={containerVariants}

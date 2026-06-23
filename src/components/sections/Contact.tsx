@@ -1,6 +1,5 @@
-// src/components/sections/Contact.tsx
 import { motion } from 'framer-motion';
-import { useState, FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 
 const Contact = () => {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');

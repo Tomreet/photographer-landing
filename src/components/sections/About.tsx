@@ -8,21 +8,22 @@ const About = () => {
     target: ref,
     offset: ['start end', 'end start'],
   });
-  const imgY = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
-  const textOpacity = useTransform(scrollYProgress, [0.2, 0.5, 0.8], [0, 1, 0]);
-  const textY = useTransform(scrollYProgress, [0.2, 0.5, 0.8], [50, 0, -50]);
+  const y3d = useTransform(scrollYProgress, [0, 1], ['-5%', '5%']);
 
   return (
-    <section ref={ref} id="about" className="min-h-screen flex items-center bg-dark py-20 px-6 md:px-20 overflow-hidden">
+    <section
+      ref={ref}
+      id="about"
+      className="min-h-screen flex items-center bg-dark py-20 px-6 md:px-20 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div className="relative h-[500px] md:h-[700px] overflow-hidden rounded-2xl">
-          <motion.img
-            src="/about.jpg"
-            alt="Фотограф"
-            className="w-full h-full object-cover"
-            style={{ y: imgY }}
-          />
-        </div>
+        <motion.div
+          className="relative h-[500px] md:h-[700px] overflow-hidden rounded-2xl bg-dark"
+          style={{ y: y3d }}
+        >
+          <Scene3D />
+        </motion.div>
+
         <div className="text-white">
           <motion.div
             initial="hidden"
@@ -66,9 +67,6 @@ const About = () => {
                 <p className="text-sm text-gray-500 mt-1">мероприятий</p>
               </div>
             </motion.div>
-              <div className="relative h-[300px] md:h-[300px] z-10 flex items-center justify-center order-first md:order-last">
-                <Scene3D />
-              </div>
           </motion.div>
         </div>
       </div>
