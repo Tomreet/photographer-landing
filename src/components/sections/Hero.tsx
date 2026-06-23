@@ -33,7 +33,7 @@ const Hero = () => {
       <motion.div
         className="absolute inset-0 bg-cover bg-center will-change-transform"
         style={{
-          backgroundImage: 'url(/hero-bg.jpg)',
+          backgroundImage: `url(${import.meta.env.BASE_URL}hero-bg.jpg)`,
           scale: bgScale,
         }}
       />

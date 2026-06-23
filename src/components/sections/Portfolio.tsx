@@ -44,7 +44,7 @@ const Portfolio = () => {
                 >
                   <div className="relative overflow-hidden rounded-xl">
                     <img
-                      src={item.src}
+                      src={`${import.meta.env.BASE_URL}${item.src.replace(/^\//, '')}`}
                       alt={item.title}
                       className="w-full h-[50vh] md:h-[70vh] object-cover transition-transform duration-700 group-hover:scale-105"
                     />

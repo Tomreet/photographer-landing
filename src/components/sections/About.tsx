@@ -8,22 +8,19 @@ const About = () => {
     target: ref,
     offset: ['start end', 'end start'],
   });
-  const y3d = useTransform(scrollYProgress, [0, 1], ['-5%', '5%']);
+  const imgY = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
 
   return (
-    <section
-      ref={ref}
-      id="about"
-      className="min-h-screen flex items-center bg-dark py-20 px-6 md:px-20 overflow-hidden"
-    >
+    <section ref={ref} id="about" className="min-h-screen flex items-center bg-dark py-20 px-6 md:px-20 overflow-hidden">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <motion.div
-          className="relative h-[500px] md:h-[700px] overflow-hidden rounded-2xl bg-dark"
-          style={{ y: y3d }}
-        >
-          <Scene3D />
-        </motion.div>
-
+        <div className="relative h-[500px] md:h-[700px] overflow-hidden rounded-2xl">
+          <motion.img
+            src={`${import.meta.env.BASE_URL}about.jpg`}
+            alt="Фотограф"
+            className="w-full h-full object-cover"
+            style={{ y: imgY }}
+          />
+        </div>
         <div className="text-white">
           <motion.div
             initial="hidden"
@@ -67,6 +64,9 @@ const About = () => {
                 <p className="text-sm text-gray-500 mt-1">мероприятий</p>
               </div>
             </motion.div>
+              <div className="relative h-[300px] md:h-[300px] z-10 flex items-center justify-center order-first md:order-last">
+                <Scene3D />
+              </div>
           </motion.div>
         </div>
       </div>
