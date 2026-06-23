@@ -31,6 +31,10 @@ const Scene3D = () => (
     dpr={[1, 2]}
     gl={{ alpha: true, antialias: true }}
     className="w-full h-full absolute inset-0"
+      style={{
+        pointerEvents: 'none',
+        touchAction: 'none',       // вот эта строка спасает от дёрганий
+  }}
   >
     <ambientLight intensity={0.5} />
     <Thing />

@@ -44,13 +44,13 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
         >
-          <motion.h1
-            variants={childVariants}
-            className="text-7xl md:text-9xl font-light font-serif tracking-wider uppercase"
-            style={{ opacity: textOpacity, y: textY }}
-          >
-            Дарьяна <br className="md:hidden" /> Пушкарёва
-          </motion.h1>
+        <motion.h1
+          variants={childVariants}
+          className="text-5xl sm:text-7xl md:text-9xl font-light font-serif tracking-wider uppercase leading-tight"
+          style={{ opacity: textOpacity, y: textY }}
+        >
+          Дарьяна <br className="xs:hidden" /> Пушкарёва
+        </motion.h1>
           <motion.p
             variants={childVariants}
             className="mt-8 text-xl md:text-2xl font-extralight tracking-[0.3em] text-copper"
