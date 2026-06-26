@@ -33,10 +33,10 @@ const Scene3D = () => (
     className="w-full h-full absolute inset-0"
       style={{
         pointerEvents: 'none',
-        touchAction: 'none',       // вот эта строка спасает от дёрганий
+        touchAction: 'none',
   }}
   >
-    <ambientLight intensity={0.5} />
+    <ambientLight intensity={0.5}/>
     <Thing />
   </Canvas>
 );

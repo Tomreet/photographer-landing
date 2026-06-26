@@ -19,7 +19,7 @@
 
 | Категория        | Библиотека                              |
 | ---------------- | ----------------------------------------|
-| Фреймворк        | React 18 + TypeScript                   |
+| Фреймворк        | React 19 + TypeScript                   |
 | Сборка           | Vite                                    |
 | Стили            | Tailwind CSS v3                         |
 | Анимации         | Framer Motion                           |
@@ -31,8 +31,8 @@
 
 ### 1. Клонируй репозиторий
 ```bash
-git clone https://github.com/your-username/MrKrabsArt.git
-cd MrKrabsArt/photographer-landing
+git clone https://github.com/Tomreet/photographer-landing
+cd Tomreet/photographer-landing
 ```
 
 ### 2. Установи зависимости
